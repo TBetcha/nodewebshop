@@ -18,6 +18,7 @@ const shopRoutes = require('./routes/shop')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
+//filtering for /admin -- then the rest of the required route
 app.use('/admin', adminRoutes)
 app.use(shopRoutes)
 
